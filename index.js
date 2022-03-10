@@ -13,7 +13,7 @@ function redirectRoute(req, res, next) {
       json: {
         name: 'pageview',
         domain: 'github-stats.com',
-        url: `https://github-stats.com${req.url}`,
+        url: `https://github-stats.com${req.url}?utm_source=github-stats.com`,
         // TBD: screen_width: ...
       },
       headers: {
