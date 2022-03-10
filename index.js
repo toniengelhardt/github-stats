@@ -7,7 +7,10 @@ const port = process.env.PORT || 8080
 
 function redirectRoute(req, res, next) {
   // Send event to Plausible
-  if (!['localhost', '127.0.0.1'].includes(request.hostname)) {
+  if (
+    !['localhost', '127.0.0.1'].includes(request.hostname) &&
+    req.url !== '/favicon.ico'
+  ) {
     request.post({
       url:'https://plausible.io/api/event',
       json: {
@@ -15,7 +18,6 @@ function redirectRoute(req, res, next) {
         domain: 'github-stats.com',
         url: `https://github-stats.com${req.url}?utm_source=github-stats`,
         referrer: 'github-stats',
-        // TBD: screen_width: ...
         props: {
           original_referrer: req.headers.referer,
         },
