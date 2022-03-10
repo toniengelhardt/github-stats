@@ -13,8 +13,12 @@ function redirectRoute(req, res, next) {
       json: {
         name: 'pageview',
         domain: 'github-stats.com',
-        url: `https://github-stats.com${req.url}?utm_source=github-stats.com`,
+        url: `https://github-stats.com${req.url}`,
+        referrer: 'github-stats.com',
         // TBD: screen_width: ...
+        props: {
+          original_referrer: req.headers.referer,
+        },
       },
       headers: {
         'Content-Type': 'application/json',
