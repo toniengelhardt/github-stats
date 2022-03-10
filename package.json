@@ -1,0 +1,16 @@
+{
+  "name": "github-stats",
+  "version": "1.0.0",
+  "description": "Link redirection for RepoTracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toniengelhardt/github-stats.git"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

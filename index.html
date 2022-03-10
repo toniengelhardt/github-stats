@@ -1,6 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Stats</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+    }
+    a {
+      color: #3b82f6;
+      //font-weight: bold;
+    }
+    a:visited {
+      color: #3b82f6;
+    }
+    pre {
+      padding: .5rem 1rem;
+      background-color: #fafafa;
+    }
+    .container {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .highlight {
+      background-color: #d1fae5;
+      color: #10b981;
+    }
+  </style>
+</head>
 <body>
-  <p>Test</p>
+  <div class="container">
+    <h1>GitHub Stats</h1>
+    <p>
+      This service is provided by
+      <a href="https://repo-tracker.com">RepoTracker</a>.
+    </p>
+    <p>
+      Just add <i>-stats</i> to any GitHub repository URL to get advanced
+      repository statistics and insights from RepoTracker.
+    </p>
+    <p>
+      <pre>https://github.com/nuxt/framework<br>https://github<span class="highlight">-stats</span>.com/nuxt/framework</pre>
+    </p>
+    <p>
+      Check out an example:
+    </p>
+    <ul>
+      <li>
+        <a href="https://github-stats.com/nuxt/framework">https://github-stats.com/nuxt/framework</a>
+      </li>
+      <li>
+        <a href="https://github-stats.com/sveltejs/svelte">https://github-stats.com/sveltejs/svelte</a>
+      </li>
+      <li>
+        <a href="https://github-stats.com/vitejs/vite">https://github-stats.com/vitejs/vite</a>
+      </li>
+    </ul>
+    <p>
+      Inspired by <a href="https://github.com/dferber90/githubbox">githubbox</a>. Enjoy!
+    </p>
+  </div>
 </body>
 </html>
