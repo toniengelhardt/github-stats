@@ -4,4 +4,4 @@ Express app to redirect links from
 
 E.g. `https://github-stats.com/nuxt/framework` -> `https://repo-tracker.com/r/gh/nuxt/framework`
 
-Works out of the box with <a href="https://vercel.com" title="Vercel" target="_blank">Vercel</a>.
+Works out of the box with <b><a href="https://vercel.com" title="Vercel" target="_blank">Vercel</a></b>. Just select the repository and enjoy redirects.
