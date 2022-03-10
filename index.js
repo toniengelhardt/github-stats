@@ -13,8 +13,8 @@ function redirectRoute(req, res, next) {
       json: {
         name: 'pageview',
         domain: 'github-stats.com',
-        url: `https://github-stats.com${req.url}?utm_source=github-stats.com`,
-        referrer: 'github-stats.com',
+        url: `https://github-stats.com${req.url}?utm_source=github-stats`,
+        referrer: 'github-stats',
         // TBD: screen_width: ...
         props: {
           original_referrer: req.headers.referer,
@@ -23,7 +23,7 @@ function redirectRoute(req, res, next) {
       headers: {
         'Content-Type': 'application/json',
         'X-Forwarded-For': request.ip,
-        'Referer': 'github-stats.com',
+        'Referer': 'github-stats',
       }
    })
   }
