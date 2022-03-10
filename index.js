@@ -16,21 +16,16 @@ function redirectRoute(req, res, next) {
       json: {
         name: 'pageview',
         domain: 'github-stats.com',
-        url: `https://github-stats.com${req.url}?utm_source=github-stats`,
-        referrer: 'github-stats',
-        props: {
-          original_referrer: req.headers.referer,
-        },
+        url: `https://github-stats.com${req.url}`,
       },
       headers: {
         'Content-Type': 'application/json',
         'X-Forwarded-For': request.ip,
-        'Referer': 'github-stats',
       }
    })
   }
   // Redirect
-  res.redirect(`https://repo-tracker.com/r/gh${req.url}`)
+  res.redirect(`https://repo-tracker.com/r/gh${req.url}?utm_source=github-stats.com`)
 }
 
 // Serve landing page
