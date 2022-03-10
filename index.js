@@ -14,7 +14,7 @@ function redirectRoute(req, res, next) {
         name: 'pageview',
         domain: 'github-stats.com',
         url: `https://github-stats.com${req.url}`,
-        // screen_width: ...
+        // TBD: screen_width: ...
       },
       headers: {
         'Content-Type': 'application/json',
@@ -26,11 +26,15 @@ function redirectRoute(req, res, next) {
   res.redirect(`https://repo-tracker.com/r/gh${req.url}`)
 }
 
-// Landing page
+// Serve landing page
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/index.html'))
 })
-// Redirects
+// Serve robots.txt
+app.get('/robots.txt', function(req, res) {
+  res.sendFile(path.join(__dirname, '/robots.txt'))
+})
+// Wildcard redirects
 app.get("/*", redirectRoute)
 
 app.listen(port, () => {
