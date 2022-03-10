@@ -25,7 +25,7 @@ function redirectRoute(req, res, next) {
    })
   }
   // Redirect
-  res.redirect(`https://repo-tracker.com/r/gh${req.url}?utm_source=github-stats.com`)
+  res.redirect(`https://repo-tracker.com/r/gh${req.url}?utm_source=github-stats`)
 }
 
 // Serve landing page
