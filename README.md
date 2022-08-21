@@ -9,3 +9,7 @@ https://github-stats.com/nuxt/framework -> https://repo-tracker.com/r/gh/nuxt/fr
 ```
 
 Works out of the box with <b><a href="https://vercel.com" title="Vercel" target="_blank">Vercel</a></b>. Just select the repository and enjoy redirects.
+
+Stats and insights for this repository: 
+
+[https://github-stats.com/toniengelhardt/github-stats](https://github-stats.com/toniengelhardt/github-stats)
